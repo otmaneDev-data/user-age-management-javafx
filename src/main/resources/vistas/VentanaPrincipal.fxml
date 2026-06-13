@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="500.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.iesalandalus.programacion.tp08.vista.controladores.VentanaPrincipal">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Fichero">
+                    <items>
+                        <MenuItem text="Salir" onAction="#salir"/>
+                    </items>
+                </Menu>
+                <Menu text="Ayuda">
+                    <items>
+                        <MenuItem text="Acerca de ..." onAction="#acercaDe"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <children>
+                <Label text="Usuarios">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <ListView fx:id="lvUsuarios" prefHeight="300.0" prefWidth="450.0"/>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <Label fx:id="lbMensaje" text="No has seleccionado ningún usuario"
+               style="-fx-font-size: 16; -fx-font-weight: bold; -fx-padding: 10;">
+        </Label>
+    </bottom>
+
+</BorderPane>
